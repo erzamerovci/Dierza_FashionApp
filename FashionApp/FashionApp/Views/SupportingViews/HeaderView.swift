@@ -26,7 +26,7 @@ struct HeaderView: View {
                 .frame(width: 24, height: 24)
                 .frame( maxWidth:.infinity, alignment: .leading)
                 
-                Image("Logo")
+                Image("llogo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width:84, height:84
