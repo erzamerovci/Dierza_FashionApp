@@ -15,13 +15,13 @@ struct HeaderView: View {
     
     var body: some View {
         ZStack{
-            HStack{
+            HStack(spacing:10){
                 Button{
                    menuAction()
                 } label:{
-                    Image("Menu")
+                    Image("menuuuu")
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
+                        .aspectRatio(contentMode: .fill)
                 }
                 .frame(width: 24, height: 24)
                 .frame( maxWidth:.infinity, alignment: .leading)
@@ -30,16 +30,14 @@ struct HeaderView: View {
                 Image("llogo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width:84, height:84
-                           
-                    )
+                    .frame(width:84, height:84)
                 
                 Button{
                     cardAction()
                 } label:{
-                    Image("shopping bag")
+                    Image("shoppingbaggg")
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
+                        .aspectRatio(contentMode: .fill)
                 }
                 .frame(width: 24, height: 24)
                 .frame( maxWidth:.infinity, alignment: .trailing)
@@ -48,8 +46,8 @@ struct HeaderView: View {
             }
             
         }
-        
-        .frame(maxWidth: .infinity)
+        //.frame(maxWidth: .infinity ,alignment: .trailing)
+        .frame(width: 340)
         .frame(height:56)
         .background(.white)
         .zIndex(1)

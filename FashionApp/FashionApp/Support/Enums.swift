@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum Categories: String{
+enum Categories: String {
     case All = "All"
-    case Apparel = "Apparel"
-    case Tshirt = "Tshirt"
-    case Dress = "Dress"
-    case Bag = "Bag"
+    case Tops = "Tops"
+    case Dresses = "Dresses"
+    case Shoes = "Shoes"
+    case Accessories = "Accessories"
 }
 
 enum GenderCategory: String{

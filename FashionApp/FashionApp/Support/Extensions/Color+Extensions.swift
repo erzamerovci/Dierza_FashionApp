@@ -9,46 +9,46 @@ import SwiftUI
 
 extension Color {
     static var Background: Color{
-        Color("Background")
+        Color("background")
     }
     
     static var BodyGrey: Color{
-        Color("Body")
+        Color("body")
     }
     
     static var Border: Color{
-        Color("Border")
+        Color("border")
     }
     
     static var Dark: Color{
-        Color("Dark")
+        Color("dark")
     }
     
     static var Default: Color{
-        Color("Default")
+        Color("default")
     }
     
     static var InputBG: Color{
-        Color("Input BG")
+        Color("inputBG")
     }
     
     static var Label: Color{
-        Color("Label")
+        Color("label")
     }
     
     static var Line: Color{
-        Color("Line")
+        Color("line")
     }
     
     static var OffWhite: Color{
-        Color("Off White")
+        Color("off-white")
     }
     
     static var Placeholder: Color{
-        Color("Placeholder")
+        Color("placeholder")
     }
     
     static var TitleActive: Color{
-        Color("Title Active")
+        Color("titleactive")
     }
 }

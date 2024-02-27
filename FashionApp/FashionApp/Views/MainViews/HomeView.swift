@@ -4,14 +4,12 @@
 //
 //  Created by THIS on 2/25/24.
 //
-
 import SwiftUI
 
 struct HomeView: View {
     
-    private var categories = [Categories.All.rawValue, Categories.Apparel.rawValue, Categories.Dress.rawValue, Categories.Tshirt.rawValue, Categories.Bag.rawValue]
+    private var categories = [Categories.All.rawValue, Categories.Tops.rawValue, Categories.Dresses.rawValue, Categories.Shoes.rawValue, Categories.Accessories.rawValue]
                       
-                            
     @State private var selectedCategory: Int = 0
     
         var body: some View {
@@ -80,19 +78,19 @@ struct HomeView: View {
             .font(Font.custom("Tenor Sans", size:28))
             .multilineTextAlignment(.center)
             .foregroundColor(.black)
-            .padding(.top,50)
+            .padding(.top,10)
             .frame(width: 255, height: 32, alignment: .top)
         
-        Image("Divider")
+        Image("dividerrr")
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .frame(width:140)
-            .padding(.top,10)
+            .frame(height:60)
+            .padding(.top,-15)
         
         VStack {
-            HStack(spacing:20){
-                ForEach(0..<categories.count, id:\.self){
-                    i in CategoryView(isSelected: i == selectedCategory, title:categories[i])
+            
+            HStack(spacing:10){
+                ForEach(0..<categories.count, id: \.self){ i in CategoryView(isSelected: i == selectedCategory, title: categories[i])
                         .onTapGesture {
                             selectedCategory = i
                         }
@@ -101,29 +99,31 @@ struct HomeView: View {
             .frame(maxWidth: .infinity)
             
             HStack{
-                ProductItemView(product: product1)
-                ProductItemView(product: product2)
-            }
-            HStack{
-                ProductItemView(product: product3)
-                ProductItemView(product: product4)
-            }
-            
+                           ProductItemView(product: product1)
+                           ProductItemView(product: product2)
+                       }
+                       HStack{
+                           ProductItemView(product: product3)
+                           ProductItemView(product: product4)
+                       }
+                       HStack{
+                           ProductItemView(product: product5)
+                           ProductItemView(product: product6)
+                       }
             Button{
-                
-            }label:{
-                HStack(alignment: .center, spacing: 8){
-                Text("Gjej me shume")
-                        .font(tenorSans(20))
-                        .multilineTextAlignment(.center)
-                    
-                Image(systemName: "arrow.forward")
-                        .frame(width:18, height:18)
-                }
-            }
-            .tint(Color.BodyGrey)
-            .padding(12)
-        }
+                            
+                        }label:{
+                            HStack(alignment: .center, spacing: 8){
+                            Text("Gjej me shume")
+                                    .font(tenorSans(20))
+                                    .multilineTextAlignment(.center)
+                                
+                            Image(systemName: "arrow.forward")
+                                    .frame(width:18, height:18)
+                            }
+                        }
+                        .tint(Color.BodyGrey)
+                        .padding(12)        }
     }
     @ViewBuilder
     private func BrandsView() -> some View{
@@ -147,10 +147,11 @@ struct HomeView: View {
             .aspectRatio(contentMode: .fill)
             .frame(width:340,height:244, alignment: .top)
             .clipped()
-        Image("Divider")
+        
+        Image("dividerrr")
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .frame(width:140)
+            .frame(height:60)
             .padding(.top,10)
     }
     @ViewBuilder

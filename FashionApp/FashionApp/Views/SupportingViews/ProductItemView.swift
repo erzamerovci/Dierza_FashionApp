@@ -14,12 +14,15 @@ struct ProductItemView: View {
             Button{
                 
             } label: {
+                VStack{
                 Image(product.images[0])
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width:165, height:200)
+                    .frame(width:130, height:200)
                     .cornerRadius(5)
                     .shadow(radius: 1)
+                    
+                    
 
                 Text(product.title)
                     .font(Font.custom("Tenor Sans", size:12))
@@ -27,10 +30,9 @@ struct ProductItemView: View {
                     .foregroundColor(Color.BodyGrey)
                     .frame(width:165, alignment: .top)
                 
-                Text("\(product.price)EUR")
+                Text("\(product.price) EUR")
                     .font(Font.custom("Tenor Sans", size: 14))
-                    .foregroundColor(Color.Default)
-                    .padding(.top,2)
+                    .foregroundColor(Color.Default)                }
             }
         }
     }
