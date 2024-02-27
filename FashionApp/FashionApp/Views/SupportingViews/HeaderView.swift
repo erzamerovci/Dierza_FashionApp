@@ -25,6 +25,7 @@ struct HeaderView: View {
                 }
                 .frame(width: 24, height: 24)
                 .frame( maxWidth:.infinity, alignment: .leading)
+                .padding(.leading,20)
                 
                 Image("llogo")
                     .resizable()
@@ -42,6 +43,8 @@ struct HeaderView: View {
                 }
                 .frame(width: 24, height: 24)
                 .frame( maxWidth:.infinity, alignment: .trailing)
+                .padding(.trailing,20)
+
             }
             
         }

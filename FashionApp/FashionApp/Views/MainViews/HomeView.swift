@@ -22,6 +22,14 @@ struct HomeView: View {
                     ScrollView(.vertical){
                         HeroImageView()
                         NewArrivalView()
+                        BrandsView()
+                        Image("brands")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 400)
+                        CollectionsView()
+                        TrendingHashtagview()
+                        FooterView()
                         Spacer()
                     }
                     .edgesIgnoringSafeArea(.all)
@@ -65,17 +73,14 @@ struct HomeView: View {
             .offset(.init(width: 0, height: 10))
         }
     }
-    @ViewBuilder
-    private func Collections() -> some View{
-        
-    }
+   
     @ViewBuilder
     private func NewArrivalView() -> some View{
         Text("New Arrivals")
             .font(Font.custom("Tenor Sans", size:28))
             .multilineTextAlignment(.center)
             .foregroundColor(.black)
-            .padding(.top,-90)
+            .padding(.top,50)
             .frame(width: 255, height: 32, alignment: .top)
         
         Image("Divider")
@@ -109,7 +114,7 @@ struct HomeView: View {
             }label:{
                 HStack(alignment: .center, spacing: 8){
                 Text("Gjej me shume")
-                        .font(tenorSans(_size: 20))
+                        .font(tenorSans(20))
                         .multilineTextAlignment(.center)
                     
                 Image(systemName: "arrow.forward")
@@ -119,6 +124,34 @@ struct HomeView: View {
             .tint(Color.BodyGrey)
             .padding(12)
         }
+    }
+    @ViewBuilder
+    private func BrandsView() -> some View{
+        Text("Brands")
+            .font(tenorSans(28))
+            .foregroundColor(Color.black)
+    }
+    @ViewBuilder
+    private func CollectionsView() -> some View{
+        Text("Collections")
+            .font(tenorSans(28))
+            .foregroundColor(Color.black)
+        
+        Image("summer")
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .frame(width:340,height:244, alignment: .top)
+            .clipped()
+        Image("model-1")
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .frame(width:340,height:244, alignment: .top)
+            .clipped()
+        Image("Divider")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width:140)
+            .padding(.top,10)
     }
     @ViewBuilder
     private func SideMenu() -> some View{
